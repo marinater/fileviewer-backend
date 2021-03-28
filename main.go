@@ -38,7 +38,7 @@ type Employees struct {
 // Connect function
 func Connect() error {
 	var err error
-	dbURL := os.Getenv(("DATABASE_UR:"))
+	dbURL := os.Getenv(("DATABASE_URL"))
 	if dbURL == "" {
 		dbURL = fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 	}
