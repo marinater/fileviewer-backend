@@ -162,5 +162,7 @@ func main() {
 	if port == "" {
 		port = ":3000"
 	}
+
+	print(port)
 	log.Fatal(app.Listen(port))
 }
