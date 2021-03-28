@@ -158,8 +158,8 @@ func main() {
 		return c.JSON("hello world")
 	})
 
-	port := os.Getenv("PORT")
-	if port == "" {
+	port := ":" + os.Getenv("PORT")
+	if port == ":" {
 		port = ":3000"
 	}
 
