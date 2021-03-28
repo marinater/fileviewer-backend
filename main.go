@@ -154,5 +154,9 @@ func main() {
 		return c.JSON("Deleted")
 	})
 
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.JSON("hello world")
+	})
+
 	log.Fatal(app.Listen(":3000"))
 }
